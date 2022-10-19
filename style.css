@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --off-cyan: hsla(179, 62%, 43%, 0.699);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--Light-Gray);
+  font-family: "Karla", sans-serif;
+}
+.container {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 16px;
+}
+.one {
+  min-height: 200px;
+  background-color: white;
+  grid-column: 1/-1;
+  text-align: left;
+  line-height: 1.75;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.one > * {
+  margin: 2rem;
+}
+.join {
+  color: var(--Cyan);
+  margin-bottom: -1rem;
+  font-size: 30px;
+}
+.specialspan {
+  color: var(--Bright-Yellow);
+  display: block;
+  font-weight: 700;
+  font-size: 22px;
+}
+.p-tag-1 {
+  color: lightgray;
+  font-size: 19px;
+}
+.two {
+  min-height: 250px;
+  background-color: var(--Cyan);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 20px;
+  border-bottom-left-radius: 10px;
+}
+.monthly {
+  color: var(--Light-Gray);
+  font-size: 20px;
+  font-weight: 700;
+}
+b {
+  color: var(--Light-Gray);
+}
+.per-month {
+  color: lightgray;
+  position: relative;
+  bottom: 2px;
+}
+.price {
+  color: var(--Light-Gray);
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.full-access {
+  color: var(--Light-Gray);
+  font-weight: 700;
+  font-size: 16px;
+}
+.sign {
+  max-width: 260px;
+  min-height: 50px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 5px;
+  color: var(--Light-Gray);
+  background-color: var(--Bright-Yellow);
+}
+.three {
+  min-height: 250px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--off-cyan);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  gap: 20px;
+}
+.why-us {
+  color: var(--Light-Gray);
+}
+.reasons {
+  color: lightgray;
+}
+ul li {
+  list-style-type: none;
+  line-height: 1.2;
+  font-size: 16px;
+}
+@media (max-width: 30em) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+  .join {
+    font-size: 19px;
+  }
+  .specialspan {
+    margin-bottom: 1rem;
+  }
+  .p-tag-1,
+  .specialspan {
+    font-size: 15px;
+  }
+  .one,
+  .two,
+  .three {
+    min-height: 150px;
+  }
+  .one {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .two {
+    border-bottom-left-radius: 0px;
+  }
+  .three {
+    padding: 2rem 2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .reasons {
+    font-size: 14px;
+  }
+  .monthly {
+    font-size: 17px;
+  }
+  .full-access {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+}
